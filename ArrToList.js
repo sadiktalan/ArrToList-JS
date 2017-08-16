@@ -69,3 +69,23 @@ var listToArr = function (list) {
  */
 var newArr = listToArr(myList);
 console.log(newArr);
+
+
+/**
+ * finds n'th element of the list
+ * @param list given list
+ * @param number is the order
+ * @returns {value} of the n'th node
+ */
+var nth = function (list, number) {
+    var node = list;
+    for (var i = 1; i < number; i += 1) {
+        node = node.rest;
+    }
+    return node.value;
+};
+
+/**
+ * example of the nth function
+ */
+console.log(nth(myList, 3));
